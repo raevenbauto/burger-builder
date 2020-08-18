@@ -1,4 +1,5 @@
 import React, {Fragment} from "react";
+import classes from './Layout.module.css'
 const layout = (props) => {
     return (
         <Fragment>
@@ -6,9 +7,9 @@ const layout = (props) => {
                 Toolbar, Sidebar, Backdrop
             </div>
 
-            <div>
+            <main className={classes.Content}>
                 {props.children}
-            </div>
+            </main>
         </Fragment>
     )
 };
