@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {Component, Fragment} from 'react';
+import Layout from "./components/Layout/Layout";
 
-function App() {
-  return (
-    <div>
-
-    </div>
-  );
+class App extends Component{
+  render(){
+    return (
+        <Fragment>
+            <Layout>
+                Burger Builder soon to come.
+            </Layout>
+        </Fragment>
+    )
+  }
 }
 
 export default App;
