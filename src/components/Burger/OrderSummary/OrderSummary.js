@@ -11,7 +11,7 @@ const OrderSummary = (props) => {
                     <span style={{textTransform: 'capitalize'}}>{key}:</span> {props.ingredients[key]}
                 </li>
             )
-        })
+        });
 
     return (
         <Fragment>
@@ -20,6 +20,7 @@ const OrderSummary = (props) => {
             <ul>
                 {ingredientSummary}
             </ul>
+            <p>Total Price: {props.totalPrice.toFixed(2)}</p>
             <p>Continue to checkout?</p>
             <Button btnType={"Danger"} clicked={props.purchaseCancelled}>CANCEL</Button>
             <Button btnType={"Success"} clicked={props.purchaseContinued}>CONTINUE</Button>
@@ -31,6 +32,7 @@ BurgerIngredient.propTypes = {
     ingredients: PropTypes.object.isRequired,
     purchaseCancelled: PropTypes.func.isRequired,
     purchaseContinued: PropTypes.func.isRequired,
+    totalPrice: PropTypes.number.isRequired
 };
 
 export default OrderSummary;
